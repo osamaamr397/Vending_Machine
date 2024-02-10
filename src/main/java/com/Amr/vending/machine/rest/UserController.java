@@ -64,7 +64,10 @@ public class UserController {
         userService.userAddProduct(productId,userId);
         
     }
-    
+    @PostMapping("/buyers/{userId}/addRole")
+        public void addRole(@PathVariable int userId, @RequestParam int roleId){
+            userService.userAddRole(roleId,userId);
+        }    
 
 
 }
